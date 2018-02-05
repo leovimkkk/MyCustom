@@ -7,10 +7,10 @@ import android.widget.ListView;
 import com.xwjr.utilcode.utils.AppUtils;
 import com.xwjr.utilcode.utils.LogUtils;
 import com.xwjr.utilcode.utils.Utils;
+import com.zxh.mylibrary.adapter.DrawableLayoutClickAdapter;
 import com.zxh.mylibrary.base.CommonAdapter;
 import com.zxh.mylibrary.bean.DrawableLayoutClickBean;
 import com.zxh.mylibrary.manager.DrawableLayoutClickManager;
-import com.zxh.mylibrary.adapter.DrawableLayoutClickAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +38,6 @@ public class MainActivity extends AppCompatActivity {
         manager.add("key1","keykeykey1",getResources().getDrawable(R.mipmap.assets_item1));
         manager.add("key2","keykeykey2",getResources().getDrawable(R.mipmap.assets_item1));
         manager.add("key2","keykeykey2",getResources().getDrawable(R.mipmap.assets_item1));
-        listview.setAdapter(new DrawableLayoutClickAdapter().getAdapter(dataList,R.layout.drawable_layout_click));
+        listview.setAdapter(new DrawableLayoutClickAdapter().getAdapter(this,dataList,R.layout.drawable_layout_click));
     }
 }
