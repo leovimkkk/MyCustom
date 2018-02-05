@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--MyFilletPictureImageView 加上了自己的前缀，防止和其他自定义控件冲突-->
+    <declare-styleable name="MyFilletPictureImageView">
+        <attr name="mfpi_border_color" format="color" />
+        <attr name="mfpi_border_width" format="dimension" />
+        <attr name="mfpi_press_alpha" format="integer" />
+        <attr name="mfpi_press_color" format="color" />
+        <attr name="mfpi_radius" format="dimension" />
+        <attr name="mfpi_shape_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="round" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+    </declare-styleable>
+    <!--MyPullZoomView 加上了自己的前缀，防止和其他自定义控件冲突-->
+
+    <declare-styleable name="MyPullZoomView">
+        <attr name="mpzv_sensitive" format="float" />
+        <attr name="mpzv_isZoomEnable" format="boolean" />
+        <attr name="mpzv_isParallax" format="boolean" />
+        <attr name="mpzv_zoomTime" format="integer" />
+    </declare-styleable>
+    <!--MySwitchButton 加上了自己的前缀，防止和其他自定义控件冲突-->
+
+    <declare-styleable name="MySwitchButton">
+        <attr name="msb_shadow_radius" format="reference|dimension"/>
+        <attr name="msb_shadow_offset" format="reference|dimension"/>
+        <attr name="msb_shadow_color" format="reference|color"/>
+        <attr name="msb_uncheck_color" format="reference|color"/>
+        <attr name="msb_checked_color" format="reference|color"/>
+
+        <attr name="msb_border_width" format="reference|dimension"/>
+        <attr name="msb_checkline_color" format="reference|color"/>
+        <attr name="msb_checkline_width" format="reference|dimension"/>
+        <attr name="msb_uncheckcircle_color" format="reference|color"/>
+        <attr name="msb_uncheckcircle_width" format="reference|dimension"/>
+        <attr name="msb_uncheckcircle_radius" format="reference|dimension"/>
+
+        <attr name="msb_checked" format="reference|boolean"/>
+        <attr name="msb_shadow_effect" format="reference|boolean"/>
+        <attr name="msb_effect_duration" format="reference|integer"/>
+        <attr name="msb_button_color" format="reference|color"/>
+        <attr name="msb_show_indicator" format="reference|boolean"/>
+        <attr name="msb_background" format="reference|color"/>
+        <attr name="msb_enable_effect" format="reference|boolean"/>
+    </declare-styleable>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--三级联动地址选择器的动画-->
+    <style name="Animation.Popup" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!--三级联动地址选择器的动画-->
+    <style name="Animation.Popup.Constom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+</resources>
